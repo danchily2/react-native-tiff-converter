@@ -1,11 +1,11 @@
 {
   "name": "react-native-tiff-converter",
-  "version": "0.0.68",
+  "version": "0.0.69",
   "description": "Convert tiff to image in react native. Support multi page TIFF.",
-  "main": "src/index",
-  "author": "undefined",
+  "main": "src/index.tsx",
+  "author": "",
   "license": "MIT",
-  "homepage": "http://#readme",
+  "homepage": "https://github.com/yourusername/react-native-tiff-converter#readme",
   "create-react-native-library": {
     "type": "module-legacy",
     "languages": "kotlin-objc",

@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+yarn.lock
+package-lock.json
+
+# Build artifacts
+android/build/
+android/.gradle/
+android/.idea/
+android/local.properties
+android/*.iml
+*.iml
+
+# iOS build artifacts
+ios/build/
+ios/Pods/
+ios/*.xcworkspace
+ios/*.xcodeproj
+ios/Podfile.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Example app
+example/
+
+# Testing
+coverage/
+.nyc_output/
+
+# Misc
+*.log
+.env
+.env.local
+
