@@ -9,7 +9,7 @@ buildscript {
   }
 
   dependencies {
-    classpath("com.android.tools.build:gradle:8.1.1")
+    classpath("com.android.tools.build:gradle:8.5.1")
     // noinspection DifferentKotlinGradleVersion
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
   }
@@ -73,6 +73,12 @@ android {
     }
   }
 
+  packaging {
+    jniLibs {
+      useLegacyPackaging = false
+    }
+  }
+
   lintOptions {
     disable "GradleCompatible"
   }
@@ -108,11 +114,8 @@ dependencies {
   //noinspection GradleDynamicVersion
   compileOnly "com.facebook.react:react-android:+"
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-  // implementation "com.github.gnuton:tiff-java:3.0.0"
-  implementation 'io.github.beyka:Android-TiffBitmapFactory:0.9.9.1'
-
-  // implementation 'com.github.gnuton:tiff-java:3.0.0'
-  // implementation files('libs/tiff-3.0.0.jar')
   
+  // Native libraries built from source with 16KB alignment are included in jniLibs/
+  // Java wrapper classes are included in src/main/java/org/beyka/tiffbitmapfactory/
 }
 

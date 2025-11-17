@@ -24,3 +24,18 @@ const pngFilePaths = await convertTiffToPng(filePath, 'fileId');
 // fileId - optional, needed in case you do not want to overwrite previous files
 ```
 
+## 16KB Page Size Compatibility
+
+This package includes native libraries built with 16KB page size alignment (required for Android 15+).
+
+**Native libraries are pre-built with:**
+- NDK r28 with 16KB alignment flags (`-Wl,-z,max-page-size=16384`)
+- All `.so` files have proper 16KB alignment baked in at compile time
+- Built from [Android-TiffBitmapFactory](https://github.com/Beyka/Android-TiffBitmapFactory) source
+
+**Your app should use:**
+- Android Gradle Plugin 8.5.1 or higher
+- NDK r28 or newer (optional, only if building native code)
+
+The native libraries work out-of-the-box with no additional configuration required.
+
